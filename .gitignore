@@ -1,0 +1,13 @@
+# Rust build output (root and nested workspaces)
+/target
+**/target/
+
+# JS toolchain
+node_modules/
+
+# Generated component-model artifacts (rebuildable via jco / componentize-js)
+*.component.wasm
+**/test-bindings/
+
+# Local editor / tooling state
+.claude/settings.local.json
