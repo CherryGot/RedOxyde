@@ -1,24 +1,11 @@
 # RedOxyde
 
-A WebAssembly plugin kernel for extensible applications, written in Rust.
+RedOxyde is an attempt (maybe overly ambitious?) to fix the underlying issues of the world's dominating CMS (content management system), WordPress, by borrowing and introducing concepts from projects that take security, performance and resource consumption as their top-most priority rather than running after what's the "next shiny thing" we can integrate.
 
-RedOxyde gives an application a hook and service system in the spirit of
-WordPress — actions, filters, and inter-plugin APIs — but with extensions
-compiled to WebAssembly components, isolated from each other, capability-gated,
-and typed end to end. Extensions can be written in any language that targets
-the Component Model.
+It is a general-purpose content management system for businesses and developers that are looking for a safe and blazzzingly(!) fast CMS stack in their arsenal that doesn't trade away the ergonomics of WordPress-based development.
 
-**Status: pre-release, no implementation on this branch yet.** The architecture
-is settled. A working proof of concept — kernel, SDKs, tests, benchmarks —
-lives on the `canary` branch. The public implementation is being rebuilt here
-from scratch.
+Calling this overly ambitious is not an understatement because it is trying to go head-on with a project that has been there for 20+ years. In its current state, it is still in the planning and documenting phase and it will be a long LONG way before it becomes useful.
 
-## Licensing in one line
+## What is being built?
 
-Writing a proprietary extension is fine. Embedding the kernel in a proprietary
-native application is not.
-
-The kernel and core are AGPL-3.0-or-later. The WIT transport contracts, the
-per-language SDKs, and everything the code generator emits are MIT — so
-extensions link only MIT code and carry whatever license their author chooses.
-Details in [`LICENSING.md`](LICENSING.md).
+RedOxyde is a Rust-based CMS stack that utilizes the WebAssembly runtime to allow writing truly extensible applications without trading away performance, security and similar developer ergonomics. Just like plugins and themes, RedOxyde will have a concept of Extensions that can be written in any language that targets the WebAssembly Component Model. Developers can use the familiar concepts of actions and filters borrowed from WordPress, while extensions stay truly isolated, capability-gated and typed end-to-end via compiled wasm modules, keeping things secure.
